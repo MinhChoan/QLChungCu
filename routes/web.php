@@ -34,5 +34,14 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 
 Route::get('/admin/quan-ly-cu-dan', [CuDanController::class, 'index'])->name('quan_ly_cu_dan');
-Route::get('/admin/quan-ly-toa-nha', [ToaNhaController::class, 'index'])->name('quan_ly_toa_nha');
 Route::get('/admin/quan-ly-can-ho', [CanHoController::class, 'index'])->name('quan_ly_can_ho');
+
+Route::resource('/admin/quan-ly-toa-nha', ToaNhaController::class)->names([
+    'index' => 'quan_ly_toa_nha.index',
+    'create' => 'quan_ly_toa_nha.create',
+    'store' => 'quan_ly_toa_nha.store',
+    'show' => 'quan_ly_toa_nha.show',
+    'edit' => 'quan_ly_toa_nha.edit',
+    'update' => 'quan_ly_toa_nha.update',
+    'destroy' => 'quan_ly_toa_nha.destroy',
+]);

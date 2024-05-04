@@ -144,7 +144,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{ route('quan_ly_toa_nha') }}" class="nav-link">
+                <a href="{{ route('quan_ly_toa_nha.index') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Quản lý tòa nhà</p>
                 </a>
